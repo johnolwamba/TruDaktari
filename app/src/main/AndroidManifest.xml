@@ -23,22 +23,27 @@
 
         <activity android:name=".HomeView"
             android:screenOrientation="portrait"
+            android:label="Home"
             android:theme="@style/AppTheme.NoActionBar"/>
 
         <activity android:name=".UsefulInfoView"
-            android:label="Useful "
+            android:label="Useful Info"
+            android:parentActivityName=".HomeView"
             android:screenOrientation="portrait"/>
 
         <activity android:name=".SearchView"
             android:label="Search"
+            android:parentActivityName=".HomeView"
             android:screenOrientation="portrait"/>
 
         <activity android:name=".ReportView"
             android:label="Report"
+            android:parentActivityName=".HomeView"
             android:screenOrientation="portrait"/>
 
         <activity android:name=".HelpView"
             android:label="Help"
+            android:parentActivityName=".HomeView"
             android:screenOrientation="portrait"/>
     </application>
 

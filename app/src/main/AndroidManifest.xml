@@ -2,13 +2,24 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.doreenaradi.trudaktari">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
     <application
+        android:name="android.support.multidex.MultiDexApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBW4FdYQdUxbGEoU8DIJz0suQTgJrMpM94" />
+
         <activity
             android:name=".SplashScreenView"
             android:label="@string/app_name"
@@ -20,30 +31,71 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".HomeView"
-            android:screenOrientation="portrait"
+        <activity
+            android:name=".HomeView"
             android:label="Home"
-            android:theme="@style/AppTheme.NoActionBar"/>
-
-        <activity android:name=".UsefulInfoView"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".UsefulInfoView"
             android:label="Useful Info"
             android:parentActivityName=".HomeView"
-            android:screenOrientation="portrait"/>
-
-        <activity android:name=".SearchView"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SearchView"
             android:label="Search"
             android:parentActivityName=".HomeView"
-            android:screenOrientation="portrait"/>
-
-        <activity android:name=".ReportView"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ReportView"
             android:label="Report"
             android:parentActivityName=".HomeView"
-            android:screenOrientation="portrait"/>
-
-        <activity android:name=".HelpView"
-            android:label="Help"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SearchResultsView"
+            android:label="Search Results"
             android:parentActivityName=".HomeView"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AboutView"
+            android:label="About Us"
+            android:parentActivityName=".HomeView"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".DoctorDetailsView"
+            android:label="Details"
+            android:parentActivityName=".HomeView"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".InfoDetails"
+            android:label="Details"
+            android:parentActivityName=".UsefulInfoView"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ScanActivity"
+            android:label="Scan"
+            android:parentActivityName=".HomeView"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ReportUnregisteredView"
+            android:label="Report"
+            android:parentActivityName=".HomeView"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".RateView"
+            android:label="Rate"
+            android:parentActivityName=".HomeView"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ReportRegisteredView"
+            android:label="Report"
+            android:parentActivityName=".HomeView"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".RecommendView"
+            android:label="Recommendation"
+            android:parentActivityName=".HomeView"
+            android:theme="@style/AppTheme.NoActionBar"
             android:screenOrientation="portrait"/>
     </application>
 

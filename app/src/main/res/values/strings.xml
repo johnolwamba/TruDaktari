@@ -5,4 +5,19 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
+
+
+    <string-array name="search_type">
+        <item>Doctor</item>
+        <item>Hospital</item>
+    </string-array>
+
+
+    <string-array name="crime_category">
+        <item>Misconduct</item>
+        <item>Unregistered Doctor</item>
+        <item>Unlicenced Hospital</item>
+    </string-array>
+    <string name="title_activity_recommend_view">RecommendView</string>
+
 </resources>

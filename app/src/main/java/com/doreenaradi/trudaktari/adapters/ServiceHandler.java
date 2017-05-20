@@ -1,5 +1,7 @@
 package com.doreenaradi.trudaktari.adapters;
 
+import android.util.Log;
+
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
@@ -73,11 +75,11 @@ public class ServiceHandler {
                 }
                 httpPost.addHeader("Accept", "application/vnd.quickeApp.v1+json");
                 httpResponse = httpClient.execute(httpPost);
-    /*            try {
+              try {
                     Log.d("Response: ", convertStreamToString(httpResponse.getEntity().getContent()));
                 } catch (Exception e){
                     e.printStackTrace();
-                }*/
+                }
  
             } else if (method == GET) {
                 // appending params to url
@@ -87,7 +89,7 @@ public class ServiceHandler {
                     url += "?" + paramString;
                 }
                 HttpGet httpGet = new HttpGet(url);
-                //httpGet.addHeader("Authorization", "Bearer ");
+                httpGet.addHeader("Authorization", "Bearer ");
                 httpResponse = httpClient.execute(httpGet);
  
             }
